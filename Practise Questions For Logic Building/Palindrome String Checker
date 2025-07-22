@@ -1,0 +1,21 @@
+function checkPalindromeString(inputString){
+    
+let left = 0;
+let right = inputString.length-1;
+
+while(left < right){
+    if(inputString[left] !== inputString[right]){ 
+    console.log('Not a Palindrome String');
+    return;
+    }
+    left++
+    right--
+    
+}
+console.log('Palindrome String');
+    
+}
+
+checkPalindromeString('NAMAN')
+checkPalindromeString('MAN')
+checkPalindromeString('MADAM')
