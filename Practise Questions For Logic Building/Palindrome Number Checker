@@ -10,6 +10,7 @@ function palindromeCheck(number){
         
     }
 
+
     if(reversedNum == original){
         console.log('Palindrome');
     }
