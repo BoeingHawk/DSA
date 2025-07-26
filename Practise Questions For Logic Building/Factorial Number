@@ -1,4 +1,7 @@
 //Factorial Number Print
+
+
+
 function factorial(n){
     let result = 1;
     
@@ -12,6 +15,8 @@ console.log(factorial(0)); // 1
 console.log(factorial(2)); // 2
 console.log(factorial(3)); // 6
 console.log(factorial(4)); //24
+
+
 
 //Time Complexity Big-O = O(n) (Linear Time Complexity) 
 // Single Loop is used
