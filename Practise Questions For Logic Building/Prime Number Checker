@@ -1,4 +1,46 @@
-//prime number
+//prime number - Time Complexity Big-O = O(n)
+
+function isPrime(n){
+    if(n<2) return false
+    
+    for(let i = 2; i<n; i++){
+        if(n % i === 0) return false
+    }
+    return true
+}
+
+console.log(isPrime(2));
+console.log(isPrime(3));
+console.log(isPrime(4));
+console.log(isPrime(5));
+
+//Time Complexity Big-O = O(n) - Single Loop
+
+
+// OPTIMIZED SOLUTION
+
+function isPrime(n){
+    if(n<2) return false
+    
+    for(let i = 2; i<=Math.sqrt(n); i++){
+        if(n % i === 0) return false
+    }
+    return true
+}
+
+
+//EXPLANATION
+
+//Time Complexity Big-O = O(sqrt(n)) - Loop is running only till the Square Root of Input Number example: num = 4, sqrt(4) = 2, loop will run only till 2  
+
+// Composite number logic (non-prime number) square root of the number will have one of the factors less or equal of the square root of the number
+// num = 35, factors = 5,7, sqrt(35) = 5.91
+
+
+
+//ANOTHER SOLUTION 
+// IT will check for only even prime and then start loop from 3
+
 
 function isPrime(num){
     if(num <= 1) return 'Not Prime';
@@ -21,6 +63,6 @@ console.log(isPrime(3));
 console.log(isPrime(4));
 console.log(isPrime(5));
 
-
+//Time Complexity Big-O = O(sqrt(n)) - Loop is running only till the Square Root of Input Number 
 
   
