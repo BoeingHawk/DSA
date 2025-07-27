@@ -1,0 +1,26 @@
+//power of 2
+
+function checkPower(n){
+    if(n < 1 ) return false
+
+    while(n > 1){
+    if(n % 2 !== 0) {
+    return false
+    }
+    n = n /2;
+    }        
+    
+    return true
+}
+
+//console.log(checkPower(0))
+console.log(checkPower(2))
+console.log(checkPower(4))
+console.log(checkPower(8))
+
+console.log(checkPower(3))
+console.log(checkPower(5))
+console.log(checkPower(7))
+console.log(checkPower(9))
+
+
