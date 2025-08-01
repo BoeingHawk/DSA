@@ -22,5 +22,3 @@ console.log(checkPower(3))
 console.log(checkPower(5))
 console.log(checkPower(7))
 console.log(checkPower(9))
-
-
