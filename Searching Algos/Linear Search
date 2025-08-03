@@ -1,0 +1,11 @@
+//linear search
+
+function linearSearchArray(arr, n) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == n) {
+      return i
+    }
+  }
+}
+
+console.log(linearSearchArray([1, 5, 4, 3, 2, 6, 8], 8))
