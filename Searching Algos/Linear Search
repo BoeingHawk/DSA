@@ -13,3 +13,4 @@ console.log(linearSearchArray([1, 5, 4, 3, 2, 6, 8], 8))
 
 // Time Complexity Big O = O(n) (Linear Complexity)
 // Single Loop is used once
+
