@@ -47,3 +47,7 @@ console.log('Element Found at index: '+' '+recursiveBinarySearch([3,5,6,8,12,16,
 Element Found at index:  7
 Element Found at index:  1
 Element Found at index:  3
+
+
+// Time Complexity - BigO = O(log n) 
+//Explanation: Because we are reducing the size into half
