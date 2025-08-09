@@ -21,5 +21,5 @@ function binarySearch(arr, target) {
 console.log(binarySearch([-5, 2, 4, 6, 10], 10)) //console output: 4
 
 
-// Time Complexity - BigO = O(logn) 
+// Time Complexity - BigO = O(log n) 
 //Explanation: Because with every iteration, we are reducing the size into half
