@@ -1,0 +1,49 @@
+// What is Recursion in DSA?
+Recursion is when a function calls itself to solve a smaller version of the same problem, 
+until it reaches a point where the problem is simple enough to solve directly (the base case).
+
+In other words:
+
+"Break the problem into smaller chunks that look like the original, solve the smallest chunk directly, 
+and let the function handle the rest automatically."
+
+Key ingredients of recursion:
+Base case → the condition that stops the function from calling itself endlessly.
+Recursive call → where the function calls itself on a smaller subproblem.
+Progress toward the base case → each recursive step should reduce the size of the problem so you don’t loop infinitely.
+
+
+//Recursive Binary Search
+
+function recursiveBinarySearch(arr,target){
+  return search(arr,target,0,arr.length-1)
+}
+
+function search(arr,target,leftIndex,rightIndex){
+if(leftIndex > rightIndex){
+  return 'not found';
+}
+
+let middleIndex = Math.floor((leftIndex+rightIndex)/2)
+if(target === arr[middleIndex]){
+  return middleIndex;
+}
+
+if(target < arr[middleIndex]){
+  return search(arr,target,leftIndex, middleIndex - 1)
+}
+else{
+  return search(arr,target,middleIndex+1, rightIndex)
+}
+
+}
+
+console.log('Element Found at index: '+' '+recursiveBinarySearch([3,5,6,8,12,16,29,72],72));
+console.log('Element Found at index: '+' '+recursiveBinarySearch([3,5,6,8,12,16,29,72,96],5));
+console.log('Element Found at index: '+' '+recursiveBinarySearch([3,5,6,8,12,16,29,72,96,101],8));
+
+
+// Output
+Element Found at index:  7
+Element Found at index:  1
+Element Found at index:  3
