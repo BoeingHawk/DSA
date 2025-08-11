@@ -1,0 +1,54 @@
+function Sum(arr){
+  
+  let leftSum = [];
+  let rightSum = [];
+  
+  let prefixSum = 0;
+  let suffixSum = 0;
+  
+  let answerArray = [];
+  
+  for(let i = 0; i<arr.length;i++){
+    prefixSum = prefixSum + arr[i];
+    leftSum[i] = prefixSum;
+
+  }
+  
+  // for(let i = arr.length-1; i>=0;i--){
+  //   suffixSum = suffixSum + arr[i];
+  //   console.log('i: '+i);
+  //   rightSum[i] = suffixSum;
+    
+  //   answerArray[i] = Math.abs(leftSum[i] - rightSum[i]);
+  // }
+  
+  
+  for(let i = 0; i<arr.length;i++){
+    suffixSum = suffixSum + arr[arr.length-i-1];
+   
+    rightSum[arr.length-i-1] = suffixSum;
+    
+  
+    
+  }
+  for(let i = 0; i<arr.length;i++){
+     answerArray[i] = Math.abs(leftSum[i] - rightSum[i]);
+  }
+ 
+ console.log("leftSum: "+leftSum);
+console.log("rightSum: "+rightSum);   
+
+ return answerArray;
+ 
+ 
+}
+
+
+console.log(Sum([10,4,8,3]));
+
+leftSum = [10,14,22,25]
+rightSum = [25,15,11,3]
+
+ 
+// nums = [10,4,8,3]
+// Output: [15,1,11,22]
