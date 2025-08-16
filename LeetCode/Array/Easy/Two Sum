@@ -1,0 +1,48 @@
+//Bruteforce
+//Language - Python
+
+def two_sum(arr,target):
+    for i in range (len(arr)):
+        for j in range (i+1):
+            if(arr[i]+arr[j]==target):
+                print('True')
+                return
+
+    print('-1')
+    
+
+target = 5
+arr = [1,2,3,4,5,6,7]
+two_sum(arr,target)
+
+//Output: True
+
+//Time Complexity: Big O(n) = O(n*n) = O(n^2)
+// Explanation: Iteration of Array/List happened twice - (Loop inside Loop: First n for first loop and second n for second loop)
+
+
+
+
+//two sum Optimised - HashMap
+// use - Hashmap (Dictionary in Python)
+
+def two_sum_optimised(arr,target):
+    seen = {}
+    for i in arr:
+        complement = target - i
+        if complement in seen:
+            print('True')
+            return
+        seen[i] = True
+    
+    print('-1')
+    
+
+arr = [1,2,3,4,5,6,7]
+target = 5
+two_sum_optimised(arr,target) 
+
+//Output: True
+
+//Time Complexity: Big O(n) = O(n)
+// Explanation: Iteration of Array/List happened only once
