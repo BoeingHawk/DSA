@@ -26,21 +26,23 @@ two_sum(arr,target)
 //two sum Optimised - HashMap
 // use - Hashmap (Dictionary in Python)
 
-def two_sum_optimised(arr,target):
-    seen = {}
-    for i in arr:
-        complement = target - i
-        if complement in seen:
-            print('True')
-            return
-        seen[i] = True
+def two_sum_optimised(nums,target):
+    numMap = {}
+    n = len(nums)
     
-    print('-1')
+    for i in range(n):
+        complement = target - nums[i]
+        
+        if complement in numMap:
+            return [numMap[complement],i]
+        numMap[nums[i]] = i
+        
+    return []
     
 
-arr = [1,2,3,4,5,6,7]
-target = 5
-two_sum_optimised(arr,target) 
+nums = [2,7,11,15]
+target = 9
+two_sum_optimised(nums,target)    
 
 //Output: True
 
