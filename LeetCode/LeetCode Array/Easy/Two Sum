@@ -40,7 +40,6 @@ def two_sum_optimised(nums,target):
     return []
 
 
-
 nums = [2,7,11,15]
 target = 9
 print(two_sum_optimised(nums,target))
