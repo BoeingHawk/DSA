@@ -19,6 +19,25 @@ def find_leaders(arr):
 
 print(find_leaders([16,17,4,3,5,2]))
 
-# BigO(n^2)
+# Time-Complexity - BigO(n^2)
 
 
+#Optimised
+
+def find_leaders_optmised(arr):
+    result = []
+    n = len(arr)
+    
+    maxSoFar = arr[n-1]
+    result.append(maxSoFar)
+    
+    for i in range(n-2,-1,-1):
+        if(arr[i] >= maxSoFar):
+            result.append(arr[i])
+            maxSoFar = arr[i]
+    result.reverse()
+    return result
+    
+print(find_leaders_optmised([16,17,4,3,5,2]))
+
+# Time-Complexity - BigO(n)
