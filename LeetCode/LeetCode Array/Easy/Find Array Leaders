@@ -1,0 +1,24 @@
+##Find Array Leaders
+
+#bruteforce
+
+def find_leaders(arr):
+    result = []
+    n = len(arr)
+    
+    for i in range(n):
+        isLeader = True   # assume arr[i] is leader
+        for j in range(i+1, n):
+            if arr[j] > arr[i]:   # found a bigger element on right
+                isLeader = False
+                break
+        if isLeader:   # if none were bigger
+            result.append(arr[i])
+    
+    return result
+
+print(find_leaders([16,17,4,3,5,2]))
+
+# BigO(n^2)
+
+
