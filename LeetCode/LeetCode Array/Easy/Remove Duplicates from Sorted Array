@@ -1,0 +1,23 @@
+#removing duplicates from sorted array
+
+
+
+#using the hashmaps/ dictionary in python
+
+def remove_duplicate(arr):
+
+    numMap = {}
+    
+        for i in nums:
+            if i not in numMap:
+                numMap[i] = i
+        k =len(numMap)       
+        unique = list(numMap.values())
+        
+        for j in range(k):
+            nums[j] = unique[j] 
+        
+        return k
+
+# Even though the Time Complexity is O(n), but the space complexity increase to O(n) as there is an extra space taken for hashmap.
+# and question says: not to use anyother data structure and only use the array 
