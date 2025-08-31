@@ -41,3 +41,5 @@ def find_leaders_optmised(arr):
 print(find_leaders_optmised([16,17,4,3,5,2]))
 
 # Time-Complexity - BigO(n)
+
+
