@@ -1,0 +1,28 @@
+#reverse an array without reverse function
+
+def reverse_array(arr):
+    
+    result = []
+    n = len(arr)
+    # last_element = arr[n-1]
+    # result.append(last_element)
+    
+    if not arr:
+        return []
+    
+    for i in range(n-1,-1,-1):
+        result.append(arr[i])
+    
+    return result
+    
+print('Reversed Array: ',reverse_array([1,2,3]))
+
+
+
+
+#One liner Code
+
+def reverse_array(a):
+    reversed_array = a[::-1]
+    
+print('reversed_array: ',reversed_array([1,2,3,4]))
