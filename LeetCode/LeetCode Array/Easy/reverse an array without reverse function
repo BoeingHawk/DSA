@@ -19,7 +19,6 @@ print('Reversed Array: ',reverse_array([1,2,3]))
 
 
 
-
 #One liner Code
 
 def reverse_array(a):
