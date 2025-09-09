@@ -1,0 +1,61 @@
+#two_pointer_pattern
+
+#Bruteforce - O(n^2)
+
+def two_sum(arr,target):
+    n = len (arr)
+    
+    for i in range(n):
+        for j in range(i+1,n):
+            sum = arr[i] + arr[j]
+            if(sum == target):
+                return([i,j])
+
+
+print('Result of bruteforce approach:',two_sum([2,3,5,7,11,13],8))
+
+
+#Optmised - Two Pointers - O(n) - Because it is sorted
+# else - O(n log n), if unsorted
+
+def two_sum_optimised(arr,target):
+    
+    n = len(arr)
+    read = 0
+    write = n-1
+    
+    while(read < write):
+        current_sum = arr[read]+arr[write]
+        if(current_sum == target):
+            return [read,write]
+        elif current_sum<target:
+            read +=1
+        else:
+            write -=1
+    
+print('Result of optimized approach:',two_sum_optimised([2,3,5,7,11,13],8))
+
+
+#Optmial - Hashmap - O(n) - best for unsorted array
+def two_sum_optimal(arr,target):
+    n = len(arr)
+    
+    #declaring a Dictionary
+    hashMap = {}
+    
+    for i in range(n):
+        complement = target - arr[i]
+        
+        if complement in hashMap:
+            return[hashMap[complement],i]
+    
+        hashMap[arr[i]] = i
+    
+    return []
+        
+print('Result of Optimal approach:',two_sum_optimal([2,3,5,7,11,13],8))
+
+        
+        
+            
+    
