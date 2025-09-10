@@ -55,6 +55,7 @@ def two_sum_optimal(arr,target):
         
 print('Result of Optimal approach:',two_sum_optimal([2,3,5,7,11,13],8))
 
+
         
         
             
